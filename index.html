@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EchoFour — Brand Identity System</title>
+<style>
+  /* ============================================
+     ECHOFOUR BRAND GUIDE
+     Core Identity System v1.0
+     ============================================ */
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    /* PRIMARY PALETTE — Maroon & Cream */
+    --maroon: #6B1D2A;
+    --maroon-deep: #4A1119;
+    --maroon-light: #8B2E3D;
+    --cream: #F5F0E8;
+    --cream-warm: #EDE6D8;
+    --cream-light: #FAF8F4;
+
+    /* SECONDARY PALETTE — Navy */
+    --navy: #1B2A4A;
+    --navy-deep: #0F1A32;
+    --navy-light: #2C3F66;
+    --slate: #64748B;
+
+    /* NEUTRALS */
+    --black: #111111;
+    --charcoal: #2D2D2D;
+    --grey-dark: #555555;
+    --grey-mid: #999999;
+    --grey-light: #D4D4D4;
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+
+    /* TYPOGRAPHY */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-accent: 'Space Grotesk', sans-serif;
+
+    /* SPACING SCALE (8px base) */
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 40px;
+    --space-6: 48px;
+    --space-8: 64px;
+    --space-10: 80px;
+    --space-12: 96px;
+    --space-16: 128px;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- LAYOUT ---- */
+  .section {
+    padding: var(--space-12) var(--space-8);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-dark {
+    background: var(--black);
+    color: var(--white);
+    max-width: 100%;
+    padding: var(--space-12) 0;
+  }
+  .section-dark .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-8);
+  }
+
+  .section-cream {
+    background: var(--cream);
+    max-width: 100%;
+    padding: var(--space-12) 0;
+  }
+  .section-cream .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-8);
+  }
+
+  .section-maroon {
+    background: var(--maroon);
+    color: var(--cream);
+    max-width: 100%;
+    padding: var(--space-12) 0;
+  }
+  .section-maroon .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-8);
+  }
+
+  .section-navy {
+    background: var(--navy);
+    color: var(--cream);
+    max-width: 100%;
+    padding: var(--space-12) 0;
+  }
+  .section-navy .section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-8);
+  }
+
+  .section-label {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: var(--space-3);
+  }
+  .section-dark .section-label,
+  .section-maroon .section-label,
+  .section-navy .section-label {
+    color: rgba(255,255,255,0.4);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: var(--space-3);
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    color: var(--grey-dark);
+    max-width: 640px;
+    line-height: 1.7;
+    margin-bottom: var(--space-8);
+  }
+  .section-dark .section-subtitle,
+  .section-maroon .section-subtitle,
+  .section-navy .section-subtitle {
+    color: rgba(255,255,255,0.6);
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid var(--grey-light);
+    margin: var(--space-6) 0;
+  }
+
+  /* ============================================
+     COVER
+     ============================================ */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--cream);
+    text-align: center;
+    padding: var(--space-8);
+  }
+
+  .cover-logo {
+    margin-bottom: var(--space-6);
+  }
+
+  .cover h1 {
+    font-family: var(--font-display);
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: var(--maroon);
+    margin-bottom: var(--space-2);
+  }
+
+  .cover .tagline {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: var(--space-8);
+  }
+
+  .cover .meta {
+    font-size: 12px;
+    color: var(--grey-mid);
+    font-family: var(--font-accent);
+  }
+
+  /* ============================================
+     LOGO SYSTEM
+     ============================================ */
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .logo-card {
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--grey-light);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo-card-label {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    font-family: var(--font-accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  .logo-card.dark {
+    background: var(--black);
+    border-color: var(--charcoal);
+  }
+  .logo-card.cream {
+    background: var(--cream);
+    border-color: var(--cream-warm);
+  }
+  .logo-card.maroon {
+    background: var(--maroon);
+    border-color: var(--maroon-deep);
+  }
+  .logo-card.navy {
+    background: var(--navy);
+    border-color: var(--navy-deep);
+  }
+
+  /* Logo wordmark rendered in CSS */
+  .logo-wordmark {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .logo-wordmark .echo {
+    /* default color inherited */
+  }
+
+  .logo-wordmark .four {
+    font-weight: 600;
+    position: relative;
+  }
+
+  /* Logo variant: Monogram */
+  .logo-monogram {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-monogram svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ============================================
+     COLOR SYSTEM
+     ============================================ */
+  .palette-row {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+    flex-wrap: wrap;
+  }
+
+  .color-chip {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .color-swatch {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: var(--space-1);
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .color-name {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .color-hex {
+    font-family: var(--font-accent);
+    font-size: 12px;
+    color: var(--grey-mid);
+    letter-spacing: 0.5px;
+  }
+
+  .color-role {
+    font-size: 13px;
+    color: var(--grey-mid);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  .type-specimen {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--grey-light);
+  }
+
+  .type-specimen:last-child {
+    border-bottom: none;
+  }
+
+  .type-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: var(--space-3);
+  }
+
+  .type-family-name {
+    font-family: var(--font-accent);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+  }
+
+  .type-usage {
+    font-family: var(--font-accent);
+    font-size: 13px;
+    color: var(--maroon);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .type-display-sample {
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--black);
+    margin-bottom: var(--space-2);
+  }
+
+  .type-body-sample {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    max-width: 640px;
+  }
+
+  .type-accent-sample {
+    font-family: var(--font-accent);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: var(--black);
+    margin-bottom: var(--space-2);
+  }
+
+  .type-scale {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: var(--space-2);
+    align-items: baseline;
+    margin-top: var(--space-4);
+  }
+
+  .type-scale-label {
+    font-family: var(--font-accent);
+    font-size: 13px;
+    color: var(--grey-mid);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .type-scale-sample {
+    font-family: var(--font-display);
+    color: var(--black);
+    line-height: 1.2;
+  }
+
+  /* ============================================
+     GRID SYSTEM
+     ============================================ */
+  .grid-demo {
+    margin-bottom: var(--space-6);
+  }
+
+  .grid-12 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-bottom: var(--space-3);
+  }
+
+  .grid-col {
+    height: 60px;
+    background: var(--cream);
+    border: 1px solid var(--cream-warm);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
+    font-size: 10px;
+    color: var(--grey-mid);
+  }
+
+  .grid-example {
+    display: grid;
+    gap: 24px;
+    margin-bottom: var(--space-4);
+  }
+
+  .grid-example.two-col { grid-template-columns: 1fr 1fr; }
+  .grid-example.three-col { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-example.four-col { grid-template-columns: repeat(4, 1fr); }
+  .grid-example.asymmetric { grid-template-columns: 2fr 1fr; }
+  .grid-example.gallery { grid-template-columns: 1fr 1fr; }
+
+  .grid-placeholder {
+    background: var(--cream);
+    border: 1px solid var(--cream-warm);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
+    font-size: 10px;
+    color: var(--grey-mid);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 200px;
+    position: relative;
+  }
+
+  .grid-placeholder.tall { min-height: 420px; }
+  .grid-placeholder.hero { min-height: 300px; }
+
+  .grid-label {
+    font-family: var(--font-accent);
+    font-size: 14px;
+    color: var(--grey-mid);
+    margin-bottom: var(--space-2);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .concept-label {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--grey-mid);
+    margin-bottom: var(--space-2);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .section-dark .concept-label,
+  .section-maroon .concept-label,
+  .section-navy .concept-label {
+    color: var(--cream);
+  }
+
+  /* ============================================
+     BRAND APPLICATIONS
+     ============================================ */
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .app-mockup {
+    border: 1px solid var(--grey-light);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .app-mockup-header {
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--grey-light);
+  }
+
+  .app-mockup-nav {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    gap: var(--space-3);
+    color: var(--grey-dark);
+  }
+
+  .app-mockup-body {
+    padding: var(--space-5) var(--space-4);
+    min-height: 300px;
+  }
+
+  /* Drop card */
+  .drop-card {
+    border: 1px solid var(--grey-light);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 360px;
+  }
+
+  .drop-card-image {
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(135deg, var(--cream-warm) 0%, var(--cream) 50%, var(--grey-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
+    font-size: 10px;
+    color: var(--grey-mid);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .drop-card-info {
+    padding: var(--space-3);
+  }
+
+  .drop-card-artist {
+    font-family: var(--font-accent);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--grey-mid);
+    margin-bottom: 4px;
+  }
+
+  .drop-card-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .drop-card-meta {
+    font-family: var(--font-accent);
+    font-size: 12px;
+    color: var(--grey-mid);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .drop-card-timer {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--maroon);
+    letter-spacing: 1px;
+  }
+
+  /* Social card mockup */
+  .social-card {
+    width: 360px;
+    background: var(--black);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .social-card-image {
+    width: 100%;
+    height: 360px;
+    background: linear-gradient(180deg, var(--maroon-deep) 0%, var(--maroon) 60%, var(--maroon-light) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-5);
+    text-align: center;
+  }
+
+  .social-card-image .logo-wordmark {
+    color: var(--cream);
+    font-size: 36px;
+    margin-bottom: var(--space-4);
+  }
+
+  .social-card-image .drop-announcement {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.6);
+    margin-bottom: var(--space-2);
+  }
+
+  .social-card-image .drop-title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--cream);
+    margin-bottom: var(--space-2);
+  }
+
+  .social-card-image .drop-date {
+    font-family: var(--font-accent);
+    font-size: 12px;
+    color: rgba(245,240,232,0.5);
+    letter-spacing: 2px;
+  }
+
+  .social-card-caption {
+    padding: var(--space-3);
+    color: var(--grey-light);
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     TONE OF VOICE
+     ============================================ */
+  .tone-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
+
+  .tone-card {
+    padding: var(--space-4);
+    border: 1px solid var(--grey-light);
+    border-radius: 4px;
+  }
+
+  .tone-card h4 {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tone-do {
+    border-left: 3px solid var(--maroon);
+  }
+
+  .tone-dont {
+    border-left: 3px solid var(--grey-light);
+  }
+
+  .tone-card p {
+    font-size: 14px;
+    color: var(--grey-dark);
+    line-height: 1.6;
+  }
+
+  .tone-card .example {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--black);
+    margin-top: var(--space-2);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--grey-light);
+  }
+
+  /* ============================================
+     SPACING REFERENCE
+     ============================================ */
+  .spacing-demo {
+    display: flex;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-6);
+  }
+
+  .spacing-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spacing-visual {
+    background: var(--maroon);
+    opacity: 0.2;
+    border-radius: 2px;
+    margin-bottom: var(--space-1);
+  }
+
+  .spacing-value {
+    font-family: var(--font-accent);
+    font-size: 11px;
+    color: var(--grey-mid);
+  }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .section { padding: var(--space-6) var(--space-3); }
+    .section-dark .section-inner,
+    .section-cream .section-inner,
+    .section-maroon .section-inner,
+    .section-navy .section-inner { padding: 0 var(--space-3); }
+    .cover { padding: var(--space-6) var(--space-3); min-height: 80vh; }
+    .cover h1 { font-size: 40px; }
+    .cover .tagline { font-size: 12px; letter-spacing: 2px; }
+    .section-title { font-size: 30px; }
+    .section-subtitle { font-size: 16px; }
+    .logo-grid { grid-template-columns: 1fr; }
+    .logo-wordmark { font-size: 32px; }
+    .palette-row { flex-direction: column; }
+    .color-swatch { height: 80px; }
+    .type-display-sample { font-size: 32px; }
+    .type-accent-sample { font-size: 22px; }
+    .type-meta { flex-direction: column; gap: 4px; }
+    .type-scale { grid-template-columns: 1fr; gap: var(--space-1); }
+    .app-grid { grid-template-columns: 1fr; }
+    .tone-grid { grid-template-columns: 1fr; }
+    .grid-12 { display: none; }
+    .grid-example.two-col,
+    .grid-example.three-col,
+    .grid-example.four-col,
+    .grid-example.asymmetric,
+    .grid-example.gallery { grid-template-columns: 1fr; }
+    .app-mockup-nav { gap: var(--space-2); font-size: 9px; }
+    .app-mockup-body { padding: var(--space-3); min-height: 200px; }
+    .drop-card { max-width: 100%; }
+    /* Fix inline 4-col stat grids */
+    [style*="grid-template-columns: 1fr 1fr 1fr 1fr"] {
+      grid-template-columns: 1fr 1fr !important;
+      gap: var(--space-3) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cover h1 { font-size: 32px; }
+    .section-title { font-size: 26px; }
+    .logo-wordmark { font-size: 28px; }
+    .logo-monogram { width: 60px; height: 60px; }
+    [style*="grid-template-columns: 1fr 1fr 1fr 1fr"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     COVER
+     ============================================ -->
+<section class="cover">
+  <div class="cover-logo">
+    <!-- SVG Monogram — E4 -->
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="1" y="1" width="78" height="78" stroke="#6B1D2A" stroke-width="1.5" fill="none"/>
+      <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#6B1D2A">E4</text>
+    </svg>
+  </div>
+  <h1>EchoFour</h1>
+  <p class="tagline">Lifting Artists &middot; Through Modern Means</p>
+  <p class="meta">Brand Identity System &mdash; v1.1 &mdash; March 2026</p>
+</section>
+
+<!-- ============================================
+     01 — BRAND OVERVIEW
+     ============================================ -->
+<section class="section">
+  <p class="section-label">01 &mdash; Brand Overview</p>
+  <h2 class="section-title">Technology Meets<br>Traditional Craft</h2>
+  <p class="section-subtitle">
+    EchoFour finds artists rooted in classical traditions and gives them a new channel. One painting becomes a textured, dual-embossed print — produced through modern means, dropped digitally for 24 hours, then retired. We're building a bridge between gallery walls and the people who never walk through the door.
+  </p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--space-4); margin-top: var(--space-6);">
+    <div>
+      <div style="font-family: var(--font-display); font-size: 48px; font-weight: 300; color: var(--maroon);">4</div>
+      <div style="font-family: var(--font-accent); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-mid);">Featured Artists</div>
+    </div>
+    <div>
+      <div style="font-family: var(--font-display); font-size: 48px; font-weight: 300; color: var(--maroon);">1</div>
+      <div style="font-family: var(--font-accent); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-mid);">Print Per Drop</div>
+    </div>
+    <div>
+      <div style="font-family: var(--font-display); font-size: 48px; font-weight: 300; color: var(--maroon);">24</div>
+      <div style="font-family: var(--font-accent); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-mid);">Hour Window</div>
+    </div>
+    <div>
+      <div style="font-family: var(--font-display); font-size: 48px; font-weight: 300; color: var(--maroon);">2x</div>
+      <div style="font-family: var(--font-accent); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-mid);">Embossed Texture</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     02 — LOGO SYSTEM
+     ============================================ -->
+<section class="section-dark">
+  <div class="section-inner">
+    <p class="section-label">02 &mdash; Logo System</p>
+    <h2 class="section-title">Wordmark, Mark &amp; Meaning</h2>
+    <p class="section-subtitle">
+      Three concepts exploring how the EchoFour identity can communicate the brand's mission through typography, geometry, and visual storytelling. Each pairs the full "EchoFour" wordmark with a geometric mark that carries meaning.
+    </p>
+
+    <!-- CONCEPT 1: Typographic System — Wordmark + E4 Shorthand -->
+    <p class="concept-label" style="margin-top: var(--space-6);">Concept 1 &mdash; Typographic System</p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
+      The full name "EchoFour" in a light-weight serif, "Four" carrying slightly more weight for subtle emphasis. Paired with the E4 monogram as its shorthand companion. Together they form one identity system — the wordmark for headers, print, and formal contexts; the E4 for favicon, emboss stamp, social avatar, and watermark.
+    </p>
+    <div class="logo-grid">
+      <div class="logo-card" style="background: var(--white);">
+        <div class="logo-wordmark" style="color: var(--black);">
+          <span class="echo">Echo</span><span class="four">Four</span>
+        </div>
+        <span class="logo-card-label" style="color: var(--grey-mid);">Light Background</span>
+      </div>
+      <div class="logo-card dark">
+        <div class="logo-wordmark" style="color: var(--white);">
+          <span class="echo">Echo</span><span class="four">Four</span>
+        </div>
+        <span class="logo-card-label" style="color: var(--grey-mid);">Dark Background</span>
+      </div>
+      <div class="logo-card cream">
+        <div class="logo-wordmark" style="color: var(--maroon);">
+          <span class="echo">Echo</span><span class="four">Four</span>
+        </div>
+        <span class="logo-card-label" style="color: var(--grey-mid);">Cream + Maroon</span>
+      </div>
+      <div class="logo-card maroon">
+        <div class="logo-wordmark" style="color: var(--cream);">
+          <span class="echo">Echo</span><span class="four">Four</span>
+        </div>
+        <span class="logo-card-label" style="color: rgba(245,240,232,0.4);">Maroon + Cream</span>
+      </div>
+    </div>
+
+    <p class="grid-label" style="margin-top: var(--space-4);">Paired Shorthand &mdash; E4 Monogram</p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
+      The E4 monogram is the brand's shorthand — favicon, social avatar, emboss stamp on prints, watermark. It lives alongside the full wordmark, not instead of it. Think of it as the seal on the print and the icon in the browser tab.
+    </p>
+    <div class="logo-grid">
+      <div class="logo-card" style="background: var(--white);">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <rect x="1" y="1" width="78" height="78" stroke="#6B1D2A" stroke-width="1.5" fill="none"/>
+          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#6B1D2A">E4</text>
+        </svg>
+        <span class="logo-card-label" style="color: var(--grey-mid);">E4 Boxed</span>
+      </div>
+      <div class="logo-card dark">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        </svg>
+        <span class="logo-card-label" style="color: var(--grey-mid);">E4 Inverted</span>
+      </div>
+      <div class="logo-card maroon">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        </svg>
+        <span class="logo-card-label" style="color: rgba(245,240,232,0.4);">Maroon + Cream</span>
+      </div>
+      <div class="logo-card navy">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
+          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        </svg>
+        <span class="logo-card-label" style="color: rgba(245,240,232,0.3);">Navy + Cream</span>
+      </div>
+    </div>
+
+    <!-- GEOMETRIC MARK EXPLORATIONS -->
+    <p class="grid-label" style="margin-top: var(--space-10);">Geometric Mark Explorations</p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-2); max-width: 640px;">
+      What does "Echo Four" mean visually? Two concepts explore geometry to tell the brand story.
+    </p>
+
+    <!-- Concept 2: Ripples -->
+    <p class="concept-label" style="margin-top: var(--space-6);">Concept 2 &mdash; Ripples: History Echoing Forward</p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
+      Four concentric rounded rectangles radiating outward. Each ring is an artist. The echo is the reverberation — classical art traditions carried forward through modern means. Also nods to the education piece: history rippling into the present.
+    </p>
+    <div class="logo-grid">
+      <div class="logo-card cream" style="padding: 0;">
+        <img src="assets/mark-ripples.png" alt="Ripples mark — standalone" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="logo-card dark" style="padding: 0;">
+        <img src="assets/lockup-ripples-navy.png" alt="Ripples lockup on navy" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- Concept 3: Staggered Canvases -->
+    <p class="concept-label" style="margin-top: var(--space-8);">Concept 3 &mdash; Staggered Canvases: The Printing Process</p>
+    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
+      Four squares cascading diagonally, like prints being pulled from a plate. The sharp rectangular edges reference the canvas. The layering shows the process — a painting becoming a print, technology meeting craft.
+    </p>
+    <div class="logo-grid">
+      <div class="logo-card cream" style="padding: 0;">
+        <img src="assets/mark-staggered.png" alt="Staggered canvases mark — standalone" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="logo-card cream" style="padding: 0;">
+        <img src="assets/lockup-staggered-cream.png" alt="Staggered canvases lockup" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-6); padding: var(--space-4); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">
+      <p class="grid-label">Clear Space &amp; Minimum Size</p>
+      <p style="font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7;">
+        Maintain clear space equal to the cap-height of the "E" on all sides of the wordmark. Minimum size: 100px wide for wordmark, 24px for monogram/mark. The mark is intended for use as an emboss die on the physical prints — design accordingly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     03 — COLOR SYSTEM
+     ============================================ -->
+<section class="section">
+  <p class="section-label">03 &mdash; Color System</p>
+  <h2 class="section-title">Two Palettes,<br>Deliberately Restrained</h2>
+  <p class="section-subtitle">
+    The art is the color. The brand stays out of the way. Two 2-color palettes — Maroon &amp; Cream (primary) and Navy (secondary) — with supporting neutrals.
+  </p>
+
+  <!-- Primary -->
+  <p class="grid-label">Primary Palette &mdash; Maroon &amp; Cream</p>
+  <div class="palette-row">
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--maroon);"></div>
+      <div class="color-name">Maroon</div>
+      <div class="color-hex">#6B1D2A</div>
+      <div class="color-role">Primary brand color. Headings, accents, CTAs.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--maroon-deep);"></div>
+      <div class="color-name">Maroon Deep</div>
+      <div class="color-hex">#4A1119</div>
+      <div class="color-role">Hover states, dark contexts.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--cream);"></div>
+      <div class="color-name">Cream</div>
+      <div class="color-hex">#F5F0E8</div>
+      <div class="color-role">Primary background. Canvas tone.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--cream-warm);"></div>
+      <div class="color-name">Cream Warm</div>
+      <div class="color-hex">#EDE6D8</div>
+      <div class="color-role">Cards, secondary surfaces.</div>
+    </div>
+  </div>
+
+  <!-- Secondary -->
+  <p class="grid-label">Secondary Palette &mdash; Navy</p>
+  <div class="palette-row">
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--navy);"></div>
+      <div class="color-name">Navy</div>
+      <div class="color-hex">#1B2A4A</div>
+      <div class="color-role">Alternative dark. Editorial contexts.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--navy-deep);"></div>
+      <div class="color-name">Navy Deep</div>
+      <div class="color-hex">#0F1A32</div>
+      <div class="color-role">Dark mode backgrounds.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--navy-light);"></div>
+      <div class="color-name">Navy Light</div>
+      <div class="color-hex">#2C3F66</div>
+      <div class="color-role">Hover, active states on navy.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--slate);"></div>
+      <div class="color-name">Slate</div>
+      <div class="color-hex">#64748B</div>
+      <div class="color-role">Secondary text on dark.</div>
+    </div>
+  </div>
+
+  <!-- Neutrals -->
+  <p class="grid-label">Neutrals</p>
+  <div class="palette-row">
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--black);"></div>
+      <div class="color-name">Black</div>
+      <div class="color-hex">#111111</div>
+      <div class="color-role">Body text, dark UI.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--charcoal);"></div>
+      <div class="color-name">Charcoal</div>
+      <div class="color-hex">#2D2D2D</div>
+      <div class="color-role">Secondary text.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--grey-mid);"></div>
+      <div class="color-name">Grey</div>
+      <div class="color-hex">#999999</div>
+      <div class="color-role">Captions, metadata.</div>
+    </div>
+    <div class="color-chip">
+      <div class="color-swatch" style="background: var(--grey-light);"></div>
+      <div class="color-name">Grey Light</div>
+      <div class="color-hex">#D4D4D4</div>
+      <div class="color-role">Borders, dividers.</div>
+    </div>
+  </div>
+
+  <!-- Color pairing examples -->
+  <p class="grid-label" style="margin-top: var(--space-6);">Approved Pairings</p>
+  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3);">
+    <div style="height: 100px; background: var(--cream); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: var(--font-display); font-size: 20px; color: var(--maroon);">Cream + Maroon</span>
+    </div>
+    <div style="height: 100px; background: var(--maroon); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: var(--font-display); font-size: 20px; color: var(--cream);">Maroon + Cream</span>
+    </div>
+    <div style="height: 100px; background: var(--navy); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: var(--font-display); font-size: 20px; color: var(--cream);">Navy + Cream</span>
+    </div>
+    <div style="height: 100px; background: var(--black); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+      <span style="font-family: var(--font-display); font-size: 20px; color: var(--white);">Black + White</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     04 — TYPOGRAPHY
+     ============================================ -->
+<section class="section-cream">
+  <div class="section-inner">
+    <p class="section-label">04 &mdash; Typography</p>
+    <h2 class="section-title">Three Faces,<br>Clear Hierarchy</h2>
+    <p class="section-subtitle">
+      A refined serif for display. A neutral sans for body. A geometric sans for UI and metadata. Each has a distinct role — never interchangeable.
+    </p>
+
+    <!-- Display -->
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-family-name">Cormorant Garamond &mdash; Light / Regular</span>
+        <span class="type-usage">Display &amp; Headlines</span>
+      </div>
+      <div class="type-display-sample">
+        Where Paintings<br>Become Prints
+      </div>
+      <div class="type-scale">
+        <span class="type-scale-label">72px</span>
+        <span class="type-scale-sample" style="font-size: 72px; font-weight: 300;">Hero Title</span>
+      </div>
+      <div class="type-scale">
+        <span class="type-scale-label">48px</span>
+        <span class="type-scale-sample" style="font-size: 48px; font-weight: 300;">Section Heading</span>
+      </div>
+      <div class="type-scale">
+        <span class="type-scale-label">32px</span>
+        <span class="type-scale-sample" style="font-size: 32px; font-weight: 400;">Card Title</span>
+      </div>
+      <div class="type-scale">
+        <span class="type-scale-label">24px</span>
+        <span class="type-scale-sample" style="font-size: 24px; font-weight: 400;">Subsection</span>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-family-name">Inter &mdash; Regular / Medium</span>
+        <span class="type-usage">Body &amp; Long-Form</span>
+      </div>
+      <div class="type-body-sample">
+        Each print is produced through a dual-sided embossing process that creates physical depth — ridges and valleys you can feel under your fingertips. This isn't a poster. It's a tactile artifact, produced in a single run, available for exactly twenty-four hours, then permanently retired.
+      </div>
+    </div>
+
+    <!-- Accent / UI -->
+    <div class="type-specimen">
+      <div class="type-meta">
+        <span class="type-family-name">Space Grotesk &mdash; Regular / Medium</span>
+        <span class="type-usage">UI, Labels &amp; Navigation</span>
+      </div>
+      <div class="type-accent-sample">
+        Drop 007 — March 22, 2026
+      </div>
+      <div style="display: flex; gap: var(--space-4); margin-top: var(--space-2);">
+        <span style="font-family: var(--font-accent); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey-mid);">Gallery</span>
+        <span style="font-family: var(--font-accent); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--maroon);">Store</span>
+        <span style="font-family: var(--font-accent); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey-mid);">Artists</span>
+        <span style="font-family: var(--font-accent); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey-mid);">About</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     05 — GRID & LAYOUT
+     ============================================ -->
+<section class="section">
+  <p class="section-label">05 &mdash; Grid &amp; Layout</p>
+  <h2 class="section-title">Room to Breathe,<br>Art Takes Center Stage</h2>
+  <p class="section-subtitle">
+    12-column grid. 24px gutters. The layout frames the artwork and tells the artist's story without getting in the way. Clean, but not cold. Structured, but not rigid.
+  </p>
+
+  <p class="grid-label">12-Column Grid</p>
+  <div class="grid-12">
+    <div class="grid-col">1</div><div class="grid-col">2</div><div class="grid-col">3</div>
+    <div class="grid-col">4</div><div class="grid-col">5</div><div class="grid-col">6</div>
+    <div class="grid-col">7</div><div class="grid-col">8</div><div class="grid-col">9</div>
+    <div class="grid-col">10</div><div class="grid-col">11</div><div class="grid-col">12</div>
+  </div>
+
+  <p class="grid-label" style="margin-top: var(--space-6);">Store Layout &mdash; Active Drop</p>
+  <div class="grid-example asymmetric">
+    <div class="grid-placeholder tall">
+      <span>Featured Print</span>
+      <span style="margin-top: 8px; font-size: 9px;">Large hero image — full bleed</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div class="grid-placeholder" style="min-height: 80px;">
+        <span>Artist Name</span>
+      </div>
+      <div class="grid-placeholder" style="min-height: 80px;">
+        <span>Print Title &amp; Description</span>
+      </div>
+      <div class="grid-placeholder" style="min-height: 80px; border-color: var(--maroon); color: var(--maroon);">
+        <span>23:47:12 Remaining</span>
+      </div>
+      <div class="grid-placeholder" style="min-height: 60px; background: var(--maroon); color: var(--cream); border: none;">
+        <span style="color: var(--cream);">Get This Print</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="grid-label" style="margin-top: var(--space-6);">Gallery Layout &mdash; Past Drops</p>
+  <div class="grid-example four-col">
+    <div class="grid-placeholder"><span>Drop 006</span></div>
+    <div class="grid-placeholder"><span>Drop 005</span></div>
+    <div class="grid-placeholder"><span>Drop 004</span></div>
+    <div class="grid-placeholder"><span>Drop 003</span></div>
+  </div>
+
+  <p class="grid-label" style="margin-top: var(--space-6);">Artist Profile Layout</p>
+  <div class="grid-example two-col">
+    <div class="grid-placeholder tall">
+      <span>Artist Portrait / Studio</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 24px;">
+      <div class="grid-placeholder" style="min-height: 60px;">
+        <span>Style &mdash; e.g. Neo-Impressionist</span>
+      </div>
+      <div class="grid-placeholder" style="min-height: 180px;">
+        <span>Bio &amp; Artist Statement</span>
+      </div>
+      <div class="grid-placeholder" style="min-height: 120px;">
+        <span>Past Prints</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     06 — TONE OF VOICE
+     ============================================ -->
+<section class="section-maroon">
+  <div class="section-inner">
+    <p class="section-label">06 &mdash; Tone of Voice</p>
+    <h2 class="section-title">Warm. Intentional. With Purpose.</h2>
+    <p class="section-subtitle">
+      EchoFour speaks like a passionate curator who found something worth sharing — not a gallery institution, not a hype brand. The tone should make collectors feel like they're part of something being built, and make galleries feel like partners in elevating artists who deserve a wider audience.
+    </p>
+
+    <div class="tone-grid">
+      <div class="tone-card tone-do" style="background: rgba(0,0,0,0.2); border-color: rgba(245,240,232,0.15);">
+        <h4 style="color: var(--cream);">Do: Purposeful Warmth</h4>
+        <p style="color: rgba(245,240,232,0.7);">Write like someone who found a great artist and wants to tell you about them. Confident but human. Let the mission come through — we use technology to give traditional painters a modern platform.</p>
+        <p class="example" style="color: var(--cream);">"We found an artist in a studio overseas. His painting became our next print."</p>
+      </div>
+      <div class="tone-card tone-dont" style="background: rgba(0,0,0,0.2); border-color: rgba(245,240,232,0.1);">
+        <h4 style="color: var(--cream);">Don't: Hype or Cold Institutional</h4>
+        <p style="color: rgba(245,240,232,0.7);">Two extremes to avoid: streetwear hype (urgency, all-caps, fire emojis) and stuffy gallery speak (cold, distant, impersonal). We're neither Supreme nor MoMA. We're building something new.</p>
+        <p class="example" style="color: rgba(245,240,232,0.4);">"DROPPING SOON!!" / "Now exhibiting in our collection."</p>
+      </div>
+      <div class="tone-card tone-do" style="background: rgba(0,0,0,0.2); border-color: rgba(245,240,232,0.15);">
+        <h4 style="color: var(--cream);">Do: Show the Journey</h4>
+        <p style="color: rgba(245,240,232,0.7);">Every print has a story: the artist we found, their tradition, and the process of turning a painting into a tactile object through modern production. Show how technology elevates the craft — don't hide behind it.</p>
+        <p class="example" style="color: var(--cream);">"Lena paints in the Impressionist tradition. We turned her latest canvas into something you can feel under your fingertips."</p>
+      </div>
+      <div class="tone-card tone-dont" style="background: rgba(0,0,0,0.2); border-color: rgba(245,240,232,0.1);">
+        <h4 style="color: var(--cream);">Don't: Empty Art Speak</h4>
+        <p style="color: rgba(245,240,232,0.7);">Avoid jargon that sounds impressive but says nothing. Also avoid being so minimal that you lose the human element. The brand has a point of view — share it.</p>
+        <p class="example" style="color: rgba(245,240,232,0.4);">"A dialogue between materiality and the ephemeral nature of being."</p>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-4); padding: var(--space-4); border: 1px solid rgba(245,240,232,0.15); border-radius: 4px;">
+      <p class="grid-label">Key Vocabulary</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); margin-top: var(--space-2);">
+        <div>
+          <p style="font-family: var(--font-accent); font-size: 12px; color: var(--cream); margin-bottom: 4px;">Use</p>
+          <p style="font-size: 15px; color: rgba(245,240,232,0.6); line-height: 2;">
+            Drop &middot; Print &middot; Edition &middot; Studio &middot; Texture &middot; Embossed &middot; Featured &middot; Found &middot; Built &middot; Process &middot; Craft &middot; Platform
+          </p>
+        </div>
+        <div>
+          <p style="font-family: var(--font-accent); font-size: 12px; color: var(--cream); margin-bottom: 4px;">Avoid</p>
+          <p style="font-size: 15px; color: rgba(245,240,232,0.3); line-height: 2;">
+            Buy &middot; Shop &middot; Sale &middot; Discount &middot; Limited time &middot; Merch &middot; Poster &middot; Copy &middot; Exclusive deal &middot; Order now &middot; Acquire &middot; Collection &middot; Exhibit
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     07 — BRAND APPLICATIONS
+     ============================================ -->
+<section class="section">
+  <p class="section-label">07 &mdash; Brand Applications</p>
+  <h2 class="section-title">In Context</h2>
+  <p class="section-subtitle">
+    How the identity system works across touchpoints — website, social, drop announcements, and the physical print itself.
+  </p>
+
+  <div class="app-grid">
+    <!-- Website Header Mock -->
+    <div class="app-mockup">
+      <div class="app-mockup-header" style="background: var(--cream-light);">
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--maroon);">
+          Echo<span style="font-weight: 600;">Four</span>
+        </div>
+        <div class="app-mockup-nav">
+          <span>Gallery</span>
+          <span style="color: var(--maroon);">Store</span>
+          <span>Artists</span>
+          <span>About</span>
+        </div>
+      </div>
+      <div class="app-mockup-body" style="background: var(--cream); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+        <div style="font-family: var(--font-accent); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--grey-mid); margin-bottom: 16px;">New Print Drop</div>
+        <div style="font-family: var(--font-display); font-size: 36px; font-weight: 300; color: var(--black); margin-bottom: 8px;">Print Title</div>
+        <div style="font-family: var(--font-accent); font-size: 12px; color: var(--grey-mid); margin-bottom: 24px;">by Artist Name &mdash; Neo-Impressionist</div>
+        <div style="font-family: var(--font-accent); font-size: 24px; font-weight: 500; color: var(--maroon); letter-spacing: 2px;">18:32:47</div>
+        <div style="font-family: var(--font-accent); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--grey-mid); margin-top: 4px;">Remaining</div>
+      </div>
+    </div>
+
+    <!-- Drop Card -->
+    <div>
+      <p class="grid-label" style="margin-bottom: 12px;">Drop Card Component</p>
+      <div class="drop-card">
+        <div class="drop-card-image">Artwork Image</div>
+        <div class="drop-card-info">
+          <div class="drop-card-artist">Artist Name</div>
+          <div class="drop-card-title">Print Title</div>
+          <div class="drop-card-meta">
+            <span>Embossed print &middot; 50 &times; 70cm</span>
+            <span class="drop-card-timer">18:32:47</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Announcement -->
+    <div>
+      <p class="grid-label" style="margin-bottom: 12px;">Social &mdash; Drop Announcement</p>
+      <div class="social-card">
+        <div class="social-card-image">
+          <div class="drop-announcement">New Drop</div>
+          <div class="logo-wordmark" style="color: var(--cream); font-size: 28px; margin-bottom: 24px;">
+            <span class="echo">Echo</span><span class="four">Four</span>
+          </div>
+          <div class="drop-title">Print Title</div>
+          <div class="drop-date">March 22 &middot; 24 Hours Only</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Print Emboss Stamp -->
+    <div>
+      <p class="grid-label" style="margin-bottom: 12px;">Physical &mdash; Emboss Stamp on Print</p>
+      <div style="aspect-ratio: 1; max-width: 360px; background: #E8E2D6; border-radius: 4px; display: flex; align-items: flex-end; justify-content: flex-end; padding: 32px; position: relative;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-accent); font-size: 10px; color: rgba(0,0,0,0.15); letter-spacing: 2px; text-transform: uppercase;">Artwork Area</div>
+        <div style="text-align: right;">
+          <svg width="48" height="48" viewBox="0 0 80 80" fill="none">
+            <rect x="2" y="2" width="76" height="76" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" fill="none"/>
+            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="rgba(0,0,0,0.15)">E4</text>
+          </svg>
+          <div style="font-family: var(--font-accent); font-size: 8px; letter-spacing: 1px; color: rgba(0,0,0,0.2); margin-top: 4px;">007 / 200</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     08 — SPACING & SIZING
+     ============================================ -->
+<section class="section-cream">
+  <div class="section-inner">
+    <p class="section-label">08 &mdash; Spacing System</p>
+    <h2 class="section-title">8px Base Unit</h2>
+    <p class="section-subtitle">
+      All spacing derives from an 8px base. This creates consistent rhythm across all touchpoints.
+    </p>
+
+    <div class="spacing-demo">
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 8px; height: 8px;"></div>
+        <span class="spacing-value">8</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 16px; height: 16px;"></div>
+        <span class="spacing-value">16</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 24px; height: 24px;"></div>
+        <span class="spacing-value">24</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 32px; height: 32px;"></div>
+        <span class="spacing-value">32</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 48px; height: 48px;"></div>
+        <span class="spacing-value">48</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 64px; height: 64px;"></div>
+        <span class="spacing-value">64</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 96px; height: 96px;"></div>
+        <span class="spacing-value">96</span>
+      </div>
+      <div class="spacing-block">
+        <div class="spacing-visual" style="width: 128px; height: 128px;"></div>
+        <span class="spacing-value">128</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+      <div style="padding: var(--space-4); background: var(--white); border-radius: 4px; border: 1px solid var(--cream-warm);">
+        <p class="grid-label">Component Spacing</p>
+        <div style="font-size: 15px; color: var(--grey-dark); line-height: 2;">
+          Buttons: 16px vertical, 32px horizontal<br>
+          Cards: 24px internal padding<br>
+          Section gaps: 96px minimum<br>
+          Grid gutters: 24px
+        </div>
+      </div>
+      <div style="padding: var(--space-4); background: var(--white); border-radius: 4px; border: 1px solid var(--cream-warm);">
+        <p class="grid-label">Breakpoints</p>
+        <div style="font-size: 15px; color: var(--grey-dark); line-height: 2;">
+          Mobile: 375px<br>
+          Tablet: 768px<br>
+          Desktop: 1200px<br>
+          Wide: 1440px
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     09 — PHOTOGRAPHY & ART DIRECTION
+     ============================================ -->
+<section class="section-navy">
+  <div class="section-inner">
+    <p class="section-label">09 &mdash; Photography &amp; Art Direction</p>
+    <h2 class="section-title">Show the People.<br>Show the Process.</h2>
+    <p class="section-subtitle">
+      Photography should make people feel the story behind the print. The artist in their studio. Hands on the embossing press. The texture you can almost feel through the screen. Real people, real craft, real spaces — not floating in a white void.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4);">
+      <div style="aspect-ratio: 3/4; background: linear-gradient(180deg, #3a3028 0%, #2a2018 100%); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px;">
+        <span style="font-family: var(--font-accent); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px;">Style 1</span>
+        <span style="font-family: var(--font-display); font-size: 18px; color: rgba(255,255,255,0.6);">The Artist</span>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; line-height: 1.5;">Artist in their studio. Painting in progress. Natural light. Human, not posed. This is who we're lifting up.</span>
+      </div>
+      <div style="aspect-ratio: 3/4; background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px;">
+        <span style="font-family: var(--font-accent); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px;">Style 2</span>
+        <span style="font-family: var(--font-display); font-size: 18px; color: rgba(255,255,255,0.6);">The Process</span>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; line-height: 1.5;">The embossing press. Hands working. Painting becoming print. Documentary, not polished. Show the technology meeting the craft.</span>
+      </div>
+      <div style="aspect-ratio: 3/4; background: linear-gradient(180deg, #1a2030 0%, #0f1520 100%); border-radius: 4px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px;">
+        <span style="font-family: var(--font-accent); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 8px;">Style 3</span>
+        <span style="font-family: var(--font-display); font-size: 18px; color: rgba(255,255,255,0.6);">The Print</span>
+        <span style="font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; line-height: 1.5;">Close-up of embossed texture. Raking sidelight. In a real space, on a real wall. Make people want to touch it.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     10 — QUICK REFERENCE
+     ============================================ -->
+<section class="section" style="padding-bottom: var(--space-16);">
+  <p class="section-label">10 &mdash; Quick Reference</p>
+  <h2 class="section-title">At a Glance</h2>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5);">
+    <div>
+      <p class="grid-label">Colors</p>
+      <div style="display: flex; gap: 4px; margin-bottom: 8px;">
+        <div style="width: 32px; height: 32px; background: var(--maroon); border-radius: 2px;"></div>
+        <div style="width: 32px; height: 32px; background: var(--cream); border-radius: 2px; border: 1px solid var(--grey-light);"></div>
+        <div style="width: 32px; height: 32px; background: var(--navy); border-radius: 2px;"></div>
+        <div style="width: 32px; height: 32px; background: var(--black); border-radius: 2px;"></div>
+      </div>
+      <div style="font-size: 12px; color: var(--grey-mid); line-height: 1.8;">
+        #6B1D2A &middot; #F5F0E8<br>
+        #1B2A4A &middot; #111111
+      </div>
+    </div>
+    <div>
+      <p class="grid-label">Typography</p>
+      <div style="font-size: 12px; color: var(--grey-mid); line-height: 1.8;">
+        Display: Cormorant Garamond<br>
+        Body: Inter<br>
+        UI/Labels: Space Grotesk
+      </div>
+    </div>
+    <div>
+      <p class="grid-label">Key Rules</p>
+      <div style="font-size: 12px; color: var(--grey-mid); line-height: 1.8;">
+        2 colors max per surface<br>
+        Art is always the hero<br>
+        Generous white space<br>
+        No decorative elements
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" style="margin-top: var(--space-8);">
+  <p style="font-family: var(--font-accent); font-size: 12px; color: var(--grey-mid); text-align: center; letter-spacing: 1px;">
+    EchoFour Brand Identity System &mdash; v1.1 &mdash; March 2026 &mdash; Prepared by CDE
+  </p>
+</section>
+
+</body>
+</html>
