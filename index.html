@@ -271,6 +271,21 @@
     position: relative;
   }
 
+  /* New all-caps wordmark treatment */
+  .logo-wordmark-caps {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  .logo-wordmark-caps .logo-emphasis {
+    font-size: 1.18em;
+    line-height: 1;
+  }
+
   /* Logo variant: Monogram */
   .logo-monogram {
     width: 80px;
@@ -613,7 +628,8 @@
     text-align: center;
   }
 
-  .social-card-image .logo-wordmark {
+  .social-card-image .logo-wordmark,
+  .social-card-image .logo-wordmark-caps {
     color: var(--cream);
     font-size: 36px;
     margin-bottom: var(--space-4);
@@ -745,6 +761,7 @@
     .section-subtitle { font-size: 16px; }
     .logo-grid { grid-template-columns: 1fr; }
     .logo-wordmark { font-size: 32px; }
+    .logo-wordmark-caps { font-size: 32px; letter-spacing: 2px; }
     .palette-row { flex-direction: column; }
     .color-swatch { height: 80px; }
     .type-display-sample { font-size: 32px; }
@@ -773,6 +790,7 @@
     .cover h1 { font-size: 32px; }
     .section-title { font-size: 26px; }
     .logo-wordmark { font-size: 28px; }
+    .logo-wordmark-caps { font-size: 24px; letter-spacing: 1px; }
     .logo-monogram { width: 60px; height: 60px; }
     [style*="grid-template-columns: 1fr 1fr 1fr 1fr"] {
       grid-template-columns: 1fr 1fr !important;
@@ -787,13 +805,26 @@
      ============================================ -->
 <section class="cover">
   <div class="cover-logo">
-    <!-- SVG Monogram — E4 -->
-    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="1" y="1" width="78" height="78" stroke="#6B1D2A" stroke-width="1.5" fill="none"/>
-      <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#6B1D2A">E4</text>
+    <!-- SVG Monogram — Staggered E4 Mark -->
+    <svg width="100" height="80" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Central canvas rectangle -->
+      <rect x="30" y="15" width="60" height="60" rx="2" fill="#6B1D2A"/>
+      <!-- E breaking out left/up -->
+      <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A">E</text>
+      <!-- 4 breaking out right/down -->
+      <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A">4</text>
+      <!-- E overlay on canvas (cream portion visible on canvas) -->
+      <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8" clip-path="url(#canvas-clip)">E</text>
+      <!-- 4 overlay on canvas (cream portion visible on canvas) -->
+      <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8" clip-path="url(#canvas-clip)">4</text>
+      <defs>
+        <clipPath id="canvas-clip">
+          <rect x="30" y="15" width="60" height="60" rx="2"/>
+        </clipPath>
+      </defs>
     </svg>
   </div>
-  <h1>EchoFour</h1>
+  <h1><span class="logo-wordmark-caps" style="font-size: 72px; letter-spacing: -1px; color: var(--maroon);"><span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR</span></h1>
   <p class="tagline">Lifting Artists &middot; Through Modern Means</p>
   <p class="meta">Brand Identity System &mdash; v1.1 &mdash; March 2026</p>
 </section>
@@ -833,116 +864,117 @@
 <section class="section-dark">
   <div class="section-inner">
     <p class="section-label">02 &mdash; Logo System</p>
-    <h2 class="section-title">Wordmark, Mark &amp; Meaning</h2>
+    <h2 class="section-title">Wordmark, Monogram &amp; Geometric Mark</h2>
     <p class="section-subtitle">
-      Three concepts exploring how the EchoFour identity can communicate the brand's mission through typography, geometry, and visual storytelling. Each pairs the full "EchoFour" wordmark with a geometric mark that carries meaning.
+      The EchoFour identity is built from three elements: an all-caps wordmark with weighted anchors, a staggered E4 monogram that breaks the frame, and the approved staggered canvases geometric mark. Together they form a system that works from favicon to storefront.
     </p>
 
-    <!-- CONCEPT 1: Typographic System — Wordmark + E4 Shorthand -->
-    <p class="concept-label" style="margin-top: var(--space-6);">Concept 1 &mdash; Typographic System</p>
+    <!-- WORDMARK: ECHOFOUR all-caps -->
+    <p class="concept-label" style="margin-top: var(--space-6);">Wordmark &mdash; ECHOFOUR</p>
     <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
-      The full name "EchoFour" in a light-weight serif, "Four" carrying slightly more weight for subtle emphasis. Paired with the E4 monogram as its shorthand companion. Together they form one identity system — the wordmark for headers, print, and formal contexts; the E4 for favicon, emboss stamp, social avatar, and watermark.
+      The full name set in all caps with the E and F scaled slightly larger to create visual anchors. This treatment gives the wordmark a structured rhythm without splitting the name into two words. Use for headers, print materials, and formal brand contexts.
     </p>
     <div class="logo-grid">
       <div class="logo-card" style="background: var(--white);">
-        <div class="logo-wordmark" style="color: var(--black);">
-          <span class="echo">Echo</span><span class="four">Four</span>
+        <div class="logo-wordmark-caps" style="color: var(--black);">
+          <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
         </div>
         <span class="logo-card-label" style="color: var(--grey-mid);">Light Background</span>
       </div>
       <div class="logo-card dark">
-        <div class="logo-wordmark" style="color: var(--white);">
-          <span class="echo">Echo</span><span class="four">Four</span>
+        <div class="logo-wordmark-caps" style="color: var(--white);">
+          <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
         </div>
         <span class="logo-card-label" style="color: var(--grey-mid);">Dark Background</span>
       </div>
       <div class="logo-card cream">
-        <div class="logo-wordmark" style="color: var(--maroon);">
-          <span class="echo">Echo</span><span class="four">Four</span>
+        <div class="logo-wordmark-caps" style="color: var(--maroon);">
+          <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
         </div>
         <span class="logo-card-label" style="color: var(--grey-mid);">Cream + Maroon</span>
       </div>
       <div class="logo-card maroon">
-        <div class="logo-wordmark" style="color: var(--cream);">
-          <span class="echo">Echo</span><span class="four">Four</span>
+        <div class="logo-wordmark-caps" style="color: var(--cream);">
+          <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
         </div>
         <span class="logo-card-label" style="color: rgba(245,240,232,0.4);">Maroon + Cream</span>
       </div>
     </div>
 
-    <p class="grid-label" style="margin-top: var(--space-4);">Paired Shorthand &mdash; E4 Monogram</p>
+    <!-- MONOGRAM: Staggered E4 Mark -->
+    <p class="concept-label" style="margin-top: var(--space-8);">Monogram &mdash; Staggered E4</p>
     <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
-      The E4 monogram is the brand's shorthand — favicon, social avatar, emboss stamp on prints, watermark. It lives alongside the full wordmark, not instead of it. Think of it as the seal on the print and the icon in the browser tab.
+      A solid rectangular canvas anchors the center. The letter E overlaps the left edge, staggered upward. The number 4 overlaps the right edge, staggered downward. The offset creates depth and movement, like prints being pulled from a press. Use for favicon, social avatar, emboss stamp, and watermark.
     </p>
     <div class="logo-grid">
+      <!-- Light background -->
       <div class="logo-card" style="background: var(--white);">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-          <rect x="1" y="1" width="78" height="78" stroke="#6B1D2A" stroke-width="1.5" fill="none"/>
-          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#6B1D2A">E4</text>
+        <svg width="100" height="80" viewBox="0 0 120 90" fill="none">
+          <rect x="30" y="15" width="60" height="60" rx="2" fill="#6B1D2A"/>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A">4</text>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8" clip-path="url(#cc1)">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8" clip-path="url(#cc1)">4</text>
+          <defs><clipPath id="cc1"><rect x="30" y="15" width="60" height="60" rx="2"/></clipPath></defs>
         </svg>
-        <span class="logo-card-label" style="color: var(--grey-mid);">E4 Boxed</span>
+        <span class="logo-card-label" style="color: var(--grey-mid);">Light Background</span>
       </div>
+      <!-- Dark background -->
       <div class="logo-card dark">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
-          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        <svg width="100" height="80" viewBox="0 0 120 90" fill="none">
+          <rect x="30" y="15" width="60" height="60" rx="2" fill="#F5F0E8"/>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">4</text>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#111111" clip-path="url(#cc2)">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#111111" clip-path="url(#cc2)">4</text>
+          <defs><clipPath id="cc2"><rect x="30" y="15" width="60" height="60" rx="2"/></clipPath></defs>
         </svg>
-        <span class="logo-card-label" style="color: var(--grey-mid);">E4 Inverted</span>
+        <span class="logo-card-label" style="color: var(--grey-mid);">Dark Background</span>
       </div>
+      <!-- Maroon background -->
       <div class="logo-card maroon">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
-          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        <svg width="100" height="80" viewBox="0 0 120 90" fill="none">
+          <rect x="30" y="15" width="60" height="60" rx="2" fill="#F5F0E8"/>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">4</text>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A" clip-path="url(#cc3)">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#6B1D2A" clip-path="url(#cc3)">4</text>
+          <defs><clipPath id="cc3"><rect x="30" y="15" width="60" height="60" rx="2"/></clipPath></defs>
         </svg>
-        <span class="logo-card-label" style="color: rgba(245,240,232,0.4);">Maroon + Cream</span>
+        <span class="logo-card-label" style="color: rgba(245,240,232,0.4);">Maroon Background</span>
       </div>
+      <!-- Navy background -->
       <div class="logo-card navy">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-          <rect x="1" y="1" width="78" height="78" stroke="#F5F0E8" stroke-width="1.5" fill="none"/>
-          <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="#F5F0E8">E4</text>
+        <svg width="100" height="80" viewBox="0 0 120 90" fill="none">
+          <rect x="30" y="15" width="60" height="60" rx="2" fill="#F5F0E8"/>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#F5F0E8">4</text>
+          <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#1B2A4A" clip-path="url(#cc4)">E</text>
+          <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="#1B2A4A" clip-path="url(#cc4)">4</text>
+          <defs><clipPath id="cc4"><rect x="30" y="15" width="60" height="60" rx="2"/></clipPath></defs>
         </svg>
-        <span class="logo-card-label" style="color: rgba(245,240,232,0.3);">Navy + Cream</span>
+        <span class="logo-card-label" style="color: rgba(245,240,232,0.3);">Navy Background</span>
       </div>
     </div>
 
-    <!-- GEOMETRIC MARK EXPLORATIONS -->
-    <p class="grid-label" style="margin-top: var(--space-10);">Geometric Mark Explorations</p>
-    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-2); max-width: 640px;">
-      What does "Echo Four" mean visually? Two concepts explore geometry to tell the brand story.
-    </p>
-
-    <!-- Concept 2: Ripples -->
-    <p class="concept-label" style="margin-top: var(--space-6);">Concept 2 &mdash; Ripples: History Echoing Forward</p>
+    <!-- GEOMETRIC MARK: Staggered Canvases (approved direction) -->
+    <p class="concept-label" style="margin-top: var(--space-10);">Primary Geometric Mark &mdash; Staggered Canvases</p>
     <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
-      Four concentric rounded rectangles radiating outward. Each ring is an artist. The echo is the reverberation — classical art traditions carried forward through modern means. Also nods to the education piece: history rippling into the present.
-    </p>
-    <div class="logo-grid">
-      <div class="logo-card cream" style="padding: 0;">
-        <img src="assets/mark-ripples.png" alt="Ripples mark — standalone" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-      <div class="logo-card dark" style="padding: 0;">
-        <img src="assets/lockup-ripples-navy.png" alt="Ripples lockup on navy" style="width: 100%; height: 100%; object-fit: cover;">
-      </div>
-    </div>
-
-    <!-- Concept 3: Staggered Canvases -->
-    <p class="concept-label" style="margin-top: var(--space-8);">Concept 3 &mdash; Staggered Canvases: The Printing Process</p>
-    <p style="font-size: 15px; color: rgba(255,255,255,0.5); margin-bottom: var(--space-3); max-width: 600px;">
-      Four squares cascading diagonally, like prints being pulled from a plate. The sharp rectangular edges reference the canvas. The layering shows the process — a painting becoming a print, technology meeting craft.
+      Four squares cascading diagonally, like prints being pulled from a plate. The sharp rectangular edges reference the canvas. The layering shows the process: a painting becoming a print, technology meeting craft. This is the approved geometric mark direction, now paired with the new ECHOFOUR wordmark and staggered E4 monogram.
     </p>
     <div class="logo-grid">
       <div class="logo-card cream" style="padding: 0;">
         <img src="assets/mark-staggered.png" alt="Staggered canvases mark — standalone" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="logo-card cream" style="padding: 0;">
-        <img src="assets/lockup-staggered-cream.png" alt="Staggered canvases lockup" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="assets/lockup-staggered-cream.png" alt="Staggered canvases lockup with wordmark" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
     </div>
 
     <div style="margin-top: var(--space-6); padding: var(--space-4); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px;">
       <p class="grid-label">Clear Space &amp; Minimum Size</p>
       <p style="font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7;">
-        Maintain clear space equal to the cap-height of the "E" on all sides of the wordmark. Minimum size: 100px wide for wordmark, 24px for monogram/mark. The mark is intended for use as an emboss die on the physical prints — design accordingly.
+        Maintain clear space equal to the cap-height of the "E" on all sides of the wordmark. Minimum size: 100px wide for wordmark, 24px for monogram/mark. The staggered E4 monogram is intended for use as an emboss die on the physical prints. The staggered canvases mark works at all scales from app icon to storefront signage.
       </p>
     </div>
   </div>
@@ -1266,8 +1298,8 @@
     <!-- Website Header Mock -->
     <div class="app-mockup">
       <div class="app-mockup-header" style="background: var(--cream-light);">
-        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--maroon);">
-          Echo<span style="font-weight: 600;">Four</span>
+        <div class="logo-wordmark-caps" style="font-size: 18px; letter-spacing: 2px; color: var(--maroon);">
+          <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
         </div>
         <div class="app-mockup-nav">
           <span>Gallery</span>
@@ -1307,8 +1339,8 @@
       <div class="social-card">
         <div class="social-card-image">
           <div class="drop-announcement">New Drop</div>
-          <div class="logo-wordmark" style="color: var(--cream); font-size: 28px; margin-bottom: 24px;">
-            <span class="echo">Echo</span><span class="four">Four</span>
+          <div class="logo-wordmark-caps" style="color: var(--cream); font-size: 28px; letter-spacing: 2px; margin-bottom: 24px;">
+            <span class="logo-emphasis">E</span>CHO<span class="logo-emphasis">F</span>OUR
           </div>
           <div class="drop-title">Print Title</div>
           <div class="drop-date">March 22 &middot; 24 Hours Only</div>
@@ -1322,9 +1354,13 @@
       <div style="aspect-ratio: 1; max-width: 360px; background: #E8E2D6; border-radius: 4px; display: flex; align-items: flex-end; justify-content: flex-end; padding: 32px; position: relative;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: var(--font-accent); font-size: 10px; color: rgba(0,0,0,0.15); letter-spacing: 2px; text-transform: uppercase;">Artwork Area</div>
         <div style="text-align: right;">
-          <svg width="48" height="48" viewBox="0 0 80 80" fill="none">
-            <rect x="2" y="2" width="76" height="76" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" fill="none"/>
-            <text x="50%" y="54%" dominant-baseline="central" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="38" font-weight="400" fill="rgba(0,0,0,0.15)">E4</text>
+          <svg width="60" height="48" viewBox="0 0 120 90" fill="none">
+            <rect x="30" y="15" width="60" height="60" rx="2" fill="rgba(0,0,0,0.12)"/>
+            <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="rgba(0,0,0,0.12)">E</text>
+            <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="rgba(0,0,0,0.12)">4</text>
+            <text x="22" y="42" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="rgba(255,255,255,0.25)" clip-path="url(#cc-emboss)">E</text>
+            <text x="72" y="72" font-family="'Cormorant Garamond', serif" font-size="46" font-weight="700" fill="rgba(255,255,255,0.25)" clip-path="url(#cc-emboss)">4</text>
+            <defs><clipPath id="cc-emboss"><rect x="30" y="15" width="60" height="60" rx="2"/></clipPath></defs>
           </svg>
           <div style="font-family: var(--font-accent); font-size: 8px; letter-spacing: 1px; color: rgba(0,0,0,0.2); margin-top: 4px;">007 / 200</div>
         </div>
@@ -1440,7 +1476,15 @@
   <p class="section-label">10 &mdash; Quick Reference</p>
   <h2 class="section-title">At a Glance</h2>
 
-  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5);">
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: var(--space-4); margin-top: var(--space-5);">
+    <div>
+      <p class="grid-label">Logo System</p>
+      <div style="font-size: 12px; color: var(--grey-mid); line-height: 1.8;">
+        Wordmark: ECHOFOUR (all caps, E+F weighted)<br>
+        Monogram: Staggered E4 mark<br>
+        Geometric: Staggered canvases
+      </div>
+    </div>
     <div>
       <p class="grid-label">Colors</p>
       <div style="display: flex; gap: 4px; margin-bottom: 8px;">
